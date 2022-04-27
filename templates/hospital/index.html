@@ -1,0 +1,419 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+{% block content %}
+
+
+<head>
+    <title>Hospital Management System</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Tooplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static '/tooplate-style.css' %}">
+    <link rel="stylesheet" href="{% static '/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static '/animate.css' %}">
+    <link rel="stylesheet" href="{% static '/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/owl.theme.default.min.css' %}">
+
+    <style media="screen">
+        .jumbotron {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-image: url('{% static "images/back.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .jumbotron h5,
+        h3 {
+            text-align: center;
+        }
+
+
+        .alert {
+            margin: 0px;
+        }
+
+
+
+        .glow {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+            }
+
+            to {
+                text-shadow: 0 0 20px #eeeeee, 0 0 30px #fa2d2d, 0 0 40px #fa2d2d, 0 0 50px #fa2d2d, 0 0 60px #fa2d2d, 0 0 70px #fa2d2d, 0 0 80px #fa2d2d;
+            }
+        }
+
+        #about {
+            background: url('{% static "images/about-bg2.jpg" %}') no-repeat top center;
+            background-size: cover;
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+    </style>
+</head>
+
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-5">
+                    <p>Welcome we've got you covered on your Health Care!</p>
+                </div>
+
+                <div class="col-md-8 col-sm-7 text-align-right">
+                    <span class="phone-icon"><i class="fa fa-phone"></i> 010-060-0160</span>
+                    <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></span>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- MENU -->
+    <section class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="appointment-btn"><a href="/adminclick" class="nav-item nav-link">Admin Login</a></li>
+                    <li class="appointment-btn"><a href="/doctorclick" class="nav-item nav-link">Doctor Login</a></li>
+                    <li class="appointment-btn"><a href="/patientclick" class="nav-item nav-link">Patient Login</a></li>
+
+                </ul>
+            </div>
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="index.html" class="navbar-brand" style="color: #4267b2;">AUDI Health Center</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#top" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll">About Us</a></li>
+                    <li><a href="#team" class="smoothScroll">Doctors</a></li>
+                    <li><a href="#testimonials" class="smoothScroll">Testimonials</a></li>
+                    <li><a href="#footer" class="smoothScroll">Contact Us</a></li>
+                    <li class="appointment-btn"><a href="#appointment">Make an Appointment</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-info">
+                        <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="color: #4267b2;">AUDI Health Center
+                        </h2>
+                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                            <p>
+                            <h4 style="color: #4267b2;">More Experience:</h4>
+                            The million patients we treat each year prepares us to treat the one who matters
+                            the
+                            most — you.</p>
+                            <p>
+                            <h4 style="color: #4267b2;">The Right Answers:</h4>
+                            Count on our experts to deliver an accurate diagnosis and the right plan for
+                            you.</p>
+                            <p>
+                            <h4 style="color: #4267b2;">Innovation with Impact:</h4>
+                            All of our patient care, and research are driven to make discoveries that can
+                            help heal you.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TEAM -->
+    <section id="team" data-stellar-background-ratio="1">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-info">
+                        <h2 class="wow fadeInUp" data-wow-delay="0.1s" style="color: #4267b2;">Our Team</h2>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="static/images/team-image1.jpg" class="img-responsive" alt="">
+
+                        <div class="team-info">
+                            <h3>James John</h3>
+                            <p>General Surgeon</p>
+                            <div class="team-contact-info">
+                                <p><i class="fa fa-phone"></i> 010-020-0120</p>
+                                <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-envelope-o"></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                        <img src="static/images/team-image2.jpg" class="img-responsive" alt="">
+
+                        <div class="team-info">
+                            <h3>Sanjay Bhansali</h3>
+                            <p>ENT Specialist</p>
+                            <div class="team-contact-info">
+                                <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                                <p><i class="fa fa-envelope-o"></i> <a href="#">ent@company.com</a></p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-envelope-o"></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                        <img src="static/images/rajesh.jpg" class="img-responsive" alt="">
+
+                        <div class="team-info">
+                            <h3>Rajesh Tiwari</h3>
+                            <p>Neurologist</p>
+                            <div class="team-contact-info">
+                                <p><i class="fa fa-phone"></i> 010-040-0140</p>
+                                <p><i class="fa fa-envelope-o"></i> <a href="#">neuro@company.com</a></p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-envelope-o"></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb wow fadeInUp" data-wow-delay="0.8s">
+                        <img src="static/images/team-image4.jpg" class="img-responsive" alt="">
+
+                        <div class="team-info">
+                            <h3>Ayushi Vivek</h3>
+                            <p>Dentist</p>
+                            <div class="team-contact-info">
+                                <p><i class="fa fa-phone"></i> 010-040-0140</p>
+                                <p><i class="fa fa-envelope-o"></i> <a href="#">dental@company.com</a></p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-envelope-o"></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+
+    <div id="testimonials" class="section wb wow fadeIn">
+        <div class="container">
+            <div class="heading">
+                <span class="icon-logo"><img src="static/images/banner-testimonials.jpg" alt="#" class="center"
+                        style="max-height:100%; max-width:100%;"></span>
+                <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 style="text-align: center; color: #4267b2;">Testimonials</h2>
+                </div>
+            </div>
+            <!-- end title -->
+            <div class="row">
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i>Amazing clinic! Wonderful Support!</h3>
+                            <p class="lead">Doctors here are very humble and helpful. Made some good memories during my
+                                admitted days.</p>
+                        </div>
+                        <div class="testi-meta">
+                            <!-- <img src="static/images/author-image.jpg" alt="" class="img-responsive alignleft"> -->
+                            <h4 style="color: black;">Om Srivastava <small>Patient</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i> Thanks for Such Wonderful treatment!</h3>
+                            <p class="lead">They use state of the art technology to examine the ailments and all that
+                                comes at a reasonable cost.</p>
+                        </div>
+                        <div class="testi-meta">
+                            <!-- <img src="static/images/author-image.jpg" alt="" class="img-responsive alignleft"> -->
+                            <h4 style="color: black;"> Shreyas Dixit <small>Patient</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+            <hr class="invis">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i> Best Medical Support!</h3>
+                            <p class="lead">I was referred to this hospital by the doctor of an government hospital and
+                                by far was it the best descion.</p>
+                        </div>
+                        <div class="testi-meta">
+                            <!-- <img src="static/images/author-image.jpg" alt="" class="img-responsive alignleft"> -->
+                            <h4 style="color: black;">Tanmay Bhat<small>Patient</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i>Very Professional Help provided!</h3>
+                            <p class="lead">The complete staff is very homely and you can never feel you are away from
+                                your home.</p>
+                        </div>
+                        <div class="testi-meta">
+                            <!-- <img src="static/images/author-image.jpg" alt="" class="img-responsive alignleft"> -->
+                            <h4 style="color: black;">Aditi Goel<small>Patient</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer data-stellar-background-ratio="5">
+        <div class="container" id="footer">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="footer-thumb">
+                        <h4 class="wow fadeInUp" data-wow-delay="0.4s" style="color: #4267b2;">Contact Info:</h4>
+                        <p>The AUDI health Care Center is regarded as one of the best multi-speciality hospital in
+                            India,
+                            performing a multitude of treatments and procedures. The scorecard shows an unmatched record
+                            of over 1,52,000 successful
+                            surgeries.</p>
+
+                        <div class="contact-info">
+                            <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                            <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="footer-thumb">
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="footer-thumb">
+                        <div class="opening-hours">
+                            <h4 class="wow fadeInUp" data-wow-delay="0.4s" style="color: #4267b2;">Opening Hours
+                            </h4>
+                            <p>Monday - Friday :<span>08:00 AM - 10:00 PM</span></p>
+                            <p>Saturday :<span>10:00 AM - 08:00 PM</span></p>
+                            <p>Sunday :<span>Closed</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
+{% endblock content %}
